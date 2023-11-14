@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dgJ-dh-azW">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Love Dogs-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DogLover" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mhx-Id-7M9">
+                                <rect key="frame" x="16" y="145" width="361" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="lJw-8D-P67"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqV-dH-nga">
+                                <rect key="frame" x="40" y="496" width="313" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="fd1-Pn-S0V"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Get Random Dog"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="stL-7x-vrt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOf-kJ-mGx">
+                                <rect key="frame" x="0.0" y="103" width="393" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NqV-dH-nga" secondAttribute="trailing" constant="40" id="2W7-dN-l5y"/>
+                            <constraint firstItem="NqV-dH-nga" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3OW-gf-8bY"/>
+                            <constraint firstItem="mhx-Id-7M9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="51u-qx-hmR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AOf-kJ-mGx" secondAttribute="trailing" id="Ft1-j2-dhz"/>
+                            <constraint firstItem="mhx-Id-7M9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="361:852" id="Pmp-HK-ohi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mhx-Id-7M9" secondAttribute="trailing" constant="16" id="S49-cG-bEh"/>
+                            <constraint firstItem="mhx-Id-7M9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="T7g-1V-kgL"/>
+                            <constraint firstItem="mhx-Id-7M9" firstAttribute="top" secondItem="AOf-kJ-mGx" secondAttribute="bottom" id="Uod-xr-RsP"/>
+                            <constraint firstItem="NqV-dH-nga" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="313:852" id="WAf-0S-WAF"/>
+                            <constraint firstItem="NqV-dH-nga" firstAttribute="top" secondItem="mhx-Id-7M9" secondAttribute="bottom" constant="95" id="m7y-Rt-6R4"/>
+                            <constraint firstItem="AOf-kJ-mGx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="odn-5L-OXc"/>
+                            <constraint firstItem="AOf-kJ-mGx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rRB-6V-FMh"/>
+                            <constraint firstItem="NqV-dH-nga" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="u6J-g8-zpk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Love Dogs" id="S41-bN-R6b"/>
+                    <connections>
+                        <outlet property="clickLabel" destination="AOf-kJ-mGx" id="OF6-RV-uvf"/>
+                        <outlet property="dogImg" destination="mhx-Id-7M9" id="cwt-gA-38f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="970.2290076335878" y="-27.464788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7bV-Ue-VEo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dgJ-dh-azW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cvd-1S-Y3L">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jnc-dI-kLf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V4J-3g-Pbe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="43.511450381679388" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
